@@ -1,0 +1,159 @@
+/* Corps*/
+body {
+    background: url('../media/parchemin.jpg');
+    background-size: cover;
+    font-family: Helvetica;
+    color: #255179;
+    text-align: center;
+    padding: 30px;
+}
+
+/* Design infos*/
+.question {
+    background-color: #eace7c;
+    border-radius: 7px;
+    border: solid 2px #255179;
+    padding: 30px 40px 20px 40px;
+    font-size: xx-large;
+    display: inline-block;
+}
+
+.score {
+    font-size: 400%;
+    background-color: #eace7c;
+    border-radius: 7px;
+    border: solid 2px #255179;
+    padding: 50px 40px 20px 40px;
+    display: inline-block;
+}
+
+#timer {
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+#message {
+    margin: 20px;
+}
+
+#message img {
+    width: 250px;
+    text-align: center;
+}
+
+/* Design des réponses*/
+.choices {
+    margin: 20px;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    grid-gap: 20px;
+}
+
+.choice {
+    color: #255179;
+    background-color: #eace7c;
+    border: solid 2px #255179;
+    border-radius: 7px;
+    font-family: 'Folkard', serif;
+    padding: 30px 40px 20px 40px;
+    font-size: large;
+    border-radius: 10px;
+    /* On ajoute cette nouvelle propriété */
+    text-decoration: none;
+    text-shadow: 0px;
+    transition: all 0.1s;
+    -webkit-transition: all 0.1s;
+}
+
+.choice:hover {
+    box-shadow: 5px 5px 5px rgb(62, 62, 62);
+    border-bottom: 5px solid;
+    transform: translate(0px, 5px);
+    -webkit-transform: translate(0px, 5px);
+    border-bottom: 1px solid;
+}
+.choice:disabled {
+    background-color: #eacf7caf;
+    cursor: not-allowed;
+    opacity: 0.7;
+    transition: background-color 0.3s ease, opacity 0.3s ease;
+}
+.correct {
+    color: green;
+    border: solid 4px green;
+}
+
+.wrong {
+    color: red;
+    border: solid 4px red;
+}
+
+/* Design des boutons next et rejouer*/
+.button-container {
+    text-align: center;
+}
+
+#next-button {
+    color: #255179;
+    background-color: #eace7c;
+    border: solid 1px #255179;
+    border-radius: 7px;
+    font-family: Helvetica;
+    padding: 20px 10px 10px 35px;
+    font-size: medium;
+}
+
+#next-button:hover {
+    box-shadow: 5px 5px 5px rgb(62, 62, 62);
+    transform: translate(0px, 5px);
+    -webkit-transform: translate(0px, 5px);
+    border-bottom: 1px solid;
+}
+
+#next-button:disabled {
+    background-color: #eacf7caf;
+    color: #255179;
+    border: 1px solid #F4FEFE;
+    cursor: not-allowed;
+    opacity: 0.7;
+    transition: background-color 0.3s ease, opacity 0.3s ease;
+}
+
+#restart-button {
+    color: #255179;
+    background-color: #eace7c;
+    border: solid 2px #255179;
+    border-radius: 7px;
+    font-family: 'Folkard', serif;
+    padding: 30px 20px 20px 40px;
+    font-size: 150%;
+    font-weight: bold;
+}
+
+#restart-button:hover {
+    box-shadow: 5px 5px 5px rgb(62, 62, 62);
+    transform: translate(0px, 5px);
+    -webkit-transform: translate(0px, 5px);
+    border-bottom: 1px solid;
+}
+
+
+#progress {
+    display: block;
+    text-align: center;
+}
+
+#progress-bar {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 20px;
+    border: 2px solid #255179;
+}
+
+#progress-bar-full {
+    height: 20px;
+    width: 0%;
+    background: linear-gradient(90deg, rgba(196, 164, 67, 1) 0%, rgba(37, 81, 121, 1) 50%, #973a3a 100%);
+}
